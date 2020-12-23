@@ -1,0 +1,45 @@
+.container{
+      width: 90%;
+      margin: 0 auto;
+    }
+    .bar{
+      background-color: white;
+      padding: 2px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: darkblue;
+      font-weight: bold;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    }
+    .bar::before{
+      content:  attr(data-skill);
+      display: inline-block;
+      padding: 5px 0 5px 10px;
+      border-radius: inherit;
+      animation: load 2s 0s;
+      -webkit-animation: load 2s 0s;
+      -moz-animation: load 2s 0s;
+      -o-animation: load 2s 0s;
+    }
+
+    .bar.learning::before{
+      width: calc(20% - 10px);
+      background-color: orange;
+    }
+    .bar.basic::before{
+      width: calc(40% - 10px);
+      background-color: #FFBF00;
+    }
+    .bar.intermediate::before{
+      width: calc(60% - 10px);
+      background-color: Yellow;
+    }
+    .bar.advanced::before{
+      width: calc(80% - 10px);
+      background-color: greenyellow;
+    }
+    .bar.expert::before{
+      width: calc(90% - 10px);
+      background-color: green;
+    }
